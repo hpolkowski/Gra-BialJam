@@ -30,7 +30,7 @@ public class Sprite {
     private final ArrayList<Segment> plansza;
 
     private int x = 150, y = 0; 	// pozycja na ekranie
-    private final int W = 32, H = 32;   // wysokosc i szerokosc sprite'a
+    private final int W = 18, H = 32;   // wysokosc i szerokosc sprite'a
     
     public boolean isJumping = false;
 
