@@ -24,13 +24,15 @@ public class Sprite {
 
     private final int[] anim = {0, 1, 2, 1};
     private int frame = 2;		// klatka animacji
-    private boolean mirror = false; // postac patrzy w lewo/ prawo
+    private boolean mirror = false;     // postac patrzy w lewo/ prawo
     private int moving = 0;		// ruch w poziomie
-    private int jumping = 0; 	// ruch w pionie
+    private int jumping = 0;            // ruch w pionie
     private final ArrayList<Segment> plansza;
 
     private int x = 150, y = 0; 	// pozycja na ekranie
-    private final int W = 32, H = 32;// wysokosc i szerokosc sprite'a
+    private final int W = 32, H = 32;   // wysokosc i szerokosc sprite'a
+    
+    public boolean isJumping = false;
 
     public Sprite(ArrayList<Segment> pl, int x, int y) {
         this.x = x;
@@ -55,7 +57,7 @@ public class Sprite {
     }
 
     public void jump() {		// poruszanie postacia
-        if (jumping == 0) {
+        if (jumping == 0 && !isJumping) {
             jumping = 8;
         }
     }

@@ -20,6 +20,7 @@ public class SegmentLedder extends Segment {
     public void collisionV(Sprite sprite) {
         if (sprite.jumpingDown()) {
             sprite.stopJump();
+            sprite.isJumping = false;
         }
     }
 

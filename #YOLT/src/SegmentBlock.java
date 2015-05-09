@@ -17,6 +17,7 @@ public class SegmentBlock extends Segment {
 
     public void collisionV(Sprite sprite) {
         sprite.stopJump();
+        sprite.isJumping = false;
     }
 
     public void collisionH(Sprite sprite) {

@@ -104,6 +104,14 @@ public class Game extends JPanel {
                     case KeyEvent.VK_D:
                         sprite2.stop();
                         break;
+                        
+                    case KeyEvent.VK_UP:
+                        sprite.isJumping = false;
+                        break;
+                        
+                    case KeyEvent.VK_W:
+                        sprite2.isJumping = false;
+                        break;
                 }
             }
 
@@ -118,6 +126,7 @@ public class Game extends JPanel {
 
                     case KeyEvent.VK_UP:
                         sprite.jump();
+                        sprite.isJumping = true;
                         break;
                         
                     case KeyEvent.VK_A:
@@ -130,6 +139,7 @@ public class Game extends JPanel {
                         
                     case KeyEvent.VK_W:
                         sprite2.jump();
+                        sprite2.isJumping = true;
                         break;
                 }
             }
